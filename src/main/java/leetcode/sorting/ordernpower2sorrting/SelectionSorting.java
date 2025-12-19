@@ -1,4 +1,4 @@
-package leetcode.sorting;
+package leetcode.sorting.ordernpower2sorrting;
 
 import java.util.Arrays;
 
@@ -11,7 +11,6 @@ import java.util.Arrays;
 public class SelectionSorting {
     public static void main(String[] args) {
         int[] array = new int[] {13,46,24,52,20,9};
-
         int n = array.length;
         for (int i=0; i<n ; i++) {
             int minIndex = i;

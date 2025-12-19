@@ -1,10 +1,10 @@
-package leetcode.sorting;
+package leetcode.sorting.ordernpower2sorrting;
 
 import java.util.Arrays;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        int[] array = new int[] {13,46,24,52,20,9};
+        int[] array = new int[] {46,13,24,52,20,9};
         int n = array.length;
 
         for (int i=1; i<n; i++) {
