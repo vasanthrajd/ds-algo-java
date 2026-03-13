@@ -30,7 +30,7 @@ public class RotateArrayByDirectionAndByNumber {
 
     private static void rotateArrayByDirectionAndNumber(String left, int[] arr, int rotatePosition) {
         if (left.equals("LEFT")) {
-          int len = arr.length;
+            int len = arr.length;
             reverseArray(arr, 0, rotatePosition-1);
             reverseArray(arr, rotatePosition, len-1);
             reverseArray(arr, 0, len-1);

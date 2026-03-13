@@ -2,12 +2,14 @@ package leetcode.hashing;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class HighFrequencyAndLowFrequency {
     public static void main(String[] args) {
         int[] i= new int[] {10,5,10,15,10,5};
         Map<Integer, Integer> map = Arrays.stream(i).boxed().collect(Collectors.toMap(key -> key, value -> 1, Integer::sum));
+        //Map<Integer, Integer> map = Arrays.stream(i).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         //map.forEach((key, value) -> System.out.println("KEY >> " + key + "  Value >> " + value));
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;

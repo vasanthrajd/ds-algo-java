@@ -34,6 +34,7 @@ public class Mergesort {
         merge(arr, low, mid, high);
     }
     public static void merge(int[] arr, int low, int mid, int high) {
+        System.out.println("Merging the Array >> " + low + " --- " + high + "== " + Arrays.toString(Arrays.copyOfRange(arr, low, high+1)));
         List<Integer> temp = new ArrayList<>();
         int left = low, right = mid + 1;
         // Merge both sorted parts

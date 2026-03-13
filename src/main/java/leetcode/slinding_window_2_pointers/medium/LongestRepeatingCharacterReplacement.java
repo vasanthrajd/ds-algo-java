@@ -31,10 +31,10 @@ public class LongestRepeatingCharacterReplacement {
     public static void main(String[] args) {
         String str = "BAABAABBBAAA";
         int k =2;
-        System.out.println("Longest repeating character replacement >> " + longestRepeatingCharacterReplacementWithCharComparsion(str, k));
+        System.out.println("Longest repeating character replacement >> " + longestRepeatingCharacterReplacement(str, k));
         str = "AABABBA";
         k =3;
-        System.out.println("Longest repeating character replacement >> " + longestRepeatingCharacterReplacementWithCharComparsion(str, k));
+        System.out.println("Longest repeating character replacement >> " + longestRepeatingCharacterReplacement(str, k));
     }
 
     // Inconsistent Result
@@ -48,7 +48,7 @@ public class LongestRepeatingCharacterReplacement {
             if (compareResult) {
                 runningCount--;
             }
-            if (runningCount == -1) {
+            if (runningCount == -1 && j+1 <len && str.charAt(j) != str.charAt(j+1)) {
                 count = Math.max(count, j-previousIndex);
                 runningCount = k;
                 previousIndex = i;
@@ -73,6 +73,5 @@ public class LongestRepeatingCharacterReplacement {
             right++;
         }
         return maxLength;
-
     }
 }

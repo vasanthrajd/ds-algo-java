@@ -77,7 +77,7 @@ class HatchBackCar implements Car {
 
     @Override
     public CarType getCarType() {
-        return CarType.SEDAN;
+        return CarType.HATCHBACK;
     }
 
     HatchBackCar() {
@@ -101,7 +101,7 @@ class SuvCar implements Car {
 
     @Override
     public CarType getCarType() {
-        return CarType.SEDAN;
+        return CarType.SUV;
     }
 
     SuvCar() {

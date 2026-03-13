@@ -9,11 +9,40 @@ public class CompressStringByCount {
                 "aabcdeff"
         };
         for (String s : str) {
-            compareWithOptimized(s);
+            compressStringWithOccurent(s);
         }
     }
 
-    private static void copmareStringByCount(String str) {
+    /**
+     * a3b2c1d4e3
+     * a1b1c1d1e1f1
+     * a1b1c1d1e1f2
+     * a2b1c1d1e1f2
+     *
+     * a3b2c1d4
+     * a1b1c1d1
+     * a1b1c1d1e1
+     * a2b1c1d1e1
+     * @param str
+     */
+    private static void compressStringWithOccurent(String str) {
+        int count = 1;
+        char prev = str.charAt(0);
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i=1; i< str.length(); i++) {
+            if (prev == str.charAt(i)) {
+                count++;
+            } else {
+                stringBuilder.append(prev).append(count);
+                count =1;
+            }
+            prev = str.charAt(i);
+        }
+        stringBuilder.append(prev).append(count);
+        System.out.println(stringBuilder.toString());
+    }
+
+    private static void compressStringByCount(String str) {
         StringBuilder compressedString = new StringBuilder();
         int count = 0;
 

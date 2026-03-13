@@ -16,9 +16,9 @@ public class MaxConsecutiveOneInAArray {
     private static int maxConsecutiveOneInAArray(int[] arr) {
         int result = 0;
         int currentStreak =0;
-        int len = arr.length;
-        for (int i=1; i< len; i++) {
-            if (arr[i] == 1) {
+
+        for (int j : arr) {
+            if (j == 1) {
                 currentStreak++;
             } else {
                 // If element is 0, reset count
